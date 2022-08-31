@@ -1,0 +1,140 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: Monaco, monospace;
+  /*overflow-y: hidden;*/
+}
+h1{
+  margin-top: -5px;
+}
+
+#options{
+  position: absolute;
+  display: none;
+  top: 60px;
+  left: 20px;
+  width: 250px;
+  background-color: #FFFFFF;
+}
+
+#space {
+  background-color: #EEEEEE;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  margin: 0px;
+}
+
+#propLabel, #wallLabel{
+  display: inline-block;
+}
+
+#stats{
+  position: absolute;
+  display: none;
+  top: 60px;
+  right: 20px;
+  width: 250px;
+  background-color: #FFFFFF;
+}
+
+#viewPath-btn, #viewSPath-btn, #clear-selection{
+  margin-top: 10px;
+}
+#clear-selection{
+  margin-bottom: 20px;
+}
+
+#credit{
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
+#successfulPathLabel, #totalPathLabel, #newGrid-btn, #toggleOptions{
+  margin-top: -10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 25px;
+  background: #cccccc;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #000000;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 0px;
+  transition: transform .3s;
+  background: #ffffff;
+  border-color: #000000;
+  border-width: 3px;
+  color: #000000;
+  font-family: Monaco, monospace;
+  font-size: 15px;
+  height: 30px;
+  width: 150px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.btn span {
+  transition: transform .3s;
+}
+
+.btn:hover span {
+  transform: scale(0.95);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /*border-bottom: 1px dotted black;*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%;
+  left: 50%;
+  margin-left: -100px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

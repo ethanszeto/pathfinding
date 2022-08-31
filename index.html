@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>A* Pathfinding</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--link rel="icon" type="image/x-icon" href="/assets/favicon.png"-->
+  <script defer src="script.js"></script>
+  <script defer src="globalObjects.js"></script>
+</head>
+
+<body>
+  <h1>A* Pathfinding Visualizer</h1>
+  <canvas id="space" width="600px" height="600px"></canvas>
+  <div id="options">
+    <hr>
+    <p id="propLabel">Propogation Rate: 1.0x</p>
+    <input type="range" min="0.1" max="10" step="0.1"value="1" class="slider" id="propogation-slider">
+    <hr>
+    <p id="wallLabel"> Number of Walls: 50</p>
+    <input type="range" min="0" max="144" value="50" class="slider" id="wall-slider">
+    <hr>
+    <p>Choose Edit Mode:</p>
+    <form>
+      <input type="radio" id="add-walls" name="editMode"></input>
+      <label for="add-walls">Add Walls</label>
+      <p></p>
+      <input type="radio" id="remove-walls" name="editMode"></input>
+      <label for="remove-walls">Remove Walls</label>
+    </form>
+    <button id="clear-selection" class="btn">Exit Edit Mode</button>
+    <p>Note: You can only add or remove walls before the algorithm has started.</p>
+    <hr>
+  </div>
+  <div id="stats">
+    <hr>
+    <p class="tooltip">Total Paths<sup><i>i</i></sup><span class="tooltiptext">Displays number of unique possible paths from starting tile.</span></p>
+    <p id="totalPathLabel">None</p>
+    <hr>
+    <p class="tooltip">View Path Number<sup><i>i</i></sup><span class="tooltiptext">Displays a particular path number on grid.</span></p>
+    <input id="viewPathNum" type="number"></input>
+    <button id="viewPath-btn" class="btn">View</button>
+    <hr>
+    <p class="tooltip">Successful Paths<sup><i>i</i></sup><span class="tooltiptext">Number of successful paths from starting tile.</span></p>
+    <p id="successfulPathLabel">None</p>
+    <hr>
+    <p class="tooltip">View Successful Path<sup><i>i</i></sup><span class="tooltiptext">Displays a successful path number on grid.</span></p>
+    <input id="viewSPathNum" type="number"></input>
+    <button id="viewSPath-btn" class="btn">View</button>
+    <hr>
+    <p>Note: You can only view paths once the algorithm is finished.</p>
+    <hr>
+  </div>
+  <p>Click a starting and ending tile.</p>
+  <button id="newGrid-btn" class="btn">New Grid</button>
+  <button id="toggleOptions" class="btn">Options</button>
+  <p id="credit">by Ethan Szeto 2022</p>
+</body>
+
+</html>
