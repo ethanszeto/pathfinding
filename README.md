@@ -1,2 +1,2 @@
 # pathfinding
-Website visualization of the A* pathfinding heuristic method based on Dijkstra's algorithm. 
+Website visualization of the Dijkstra's pathfinding algorithm. 
